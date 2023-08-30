@@ -47,6 +47,7 @@ class SecondTableViewController: UITableViewController {
         content.image = UIImage(named: gorillas[indexPath.row])
         content.text = gorillas[indexPath.row]
         cell.contentConfiguration = content
+//        改善されました！
 
         return cell
     }
