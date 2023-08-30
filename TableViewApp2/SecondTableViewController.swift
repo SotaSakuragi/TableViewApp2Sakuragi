@@ -40,8 +40,13 @@ class SecondTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTableCell", for: indexPath)as! SecondTableViewCell
 
-        cell.cellImageView?.image = UIImage(named: gorillas[indexPath.row])
-        cell.titleLabel.text = gorillas[indexPath.row]
+//        cell.cellImageView?.image = UIImage(named: gorillas[indexPath.row])
+//        cell.titleLabel.text = gorillas[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        content.image = UIImage(named: gorillas[indexPath.row])
+        content.text = gorillas[indexPath.row]
+        cell.contentConfiguration = content
 
         return cell
     }
